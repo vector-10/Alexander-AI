@@ -1,0 +1,103 @@
+*{
+  border: 0;
+  margin:0;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+/*   
+  justify-content: center;
+  align-items:center; */
+}
+
+.message-list{
+  list-style: none;
+
+}
+
+.message-1{
+  padding: 5px;
+  color: #1976d2;
+
+}
+
+.message-2{
+  background-color: #1976d2;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+.messageArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.chat-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #1976d2;
+  padding: 20px;
+  font-size: larger;
+  color: white;  
+  margin-bottom: 50px;
+  
+}
+
+.response-area{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #1976d2;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20vh 0vh 20vh 0vh;
+  width: 50%;
+  
+}
+
+.ai-form{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+button{
+  color: white;
+  background-color: #1976d2;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top:20px ;
+  cursor: pointer;
+
+}
+input{
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: solid 2px black;
+  border-radius:10px ;
+
+
+}
+
+.welcome-message{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: black;  
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+
+
+
+

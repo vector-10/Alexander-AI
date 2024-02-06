@@ -5,41 +5,21 @@ const cors       = require('cors');
 const app        = express();
 const openAI     = require('openai');
 
-const { Configuration, OpenAIApi } = openAI;
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
-const handleError = async (req, res) => {
-    if (!configuration.apiKey) {
-    res.status(500).json({
-      error: {
-        message: "OpenAI API key not configured, please follow instructions in README.md",
-      }
-    });
-    return;
-  }
-  console.log(handleError.error.message)
-
-} 
+const openai = new openAI.OpenAI()
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/api/v1/', async (req, res) => {
-  const {message} = req.body;
-    const response = await openai.createCompletion({
-        model:"text-davinci-003",
-        prompt: `You are Alexandder-AI built by Blaise of VectorWare Technologies through openAI's API to help humans especially students with simple tasks
-        user: ${message}`,
-        max_tokens: 300,
-        temperature:1.0,
+
+  const main = async () => {
+    const completion = await openai.chat.completions.create({
+    messages: [{ role: "system", content: "I want to make you a god" }],
+    model: "gpt-3.5-turbo",
     })
-    console.log(response.data)
-    if(response.data.choices[0].text){
-      res.json({message: response.data.choices[0].text})
-    }
-})
+    console.log(completion.choices[0]);
+  }  
+
+main();
+
 
 const PORT = process.env.PORT || 3001
 

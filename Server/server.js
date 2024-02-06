@@ -5,15 +5,12 @@ const cors       = require('cors');
 const app        = express();
 const openAI     = require('openai');
 
-
-const { Configuration, OpenAIApi } = openAI
-
+const { Configuration, OpenAIApi } = openAI;
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
-
 const handleError = async (req, res) => {
     if (!configuration.apiKey) {
     res.status(500).json({
@@ -25,8 +22,7 @@ const handleError = async (req, res) => {
   }
   console.log(handleError.error.message)
 
-}
- 
+} 
 app.use(bodyParser.json());
 app.use(cors());
 

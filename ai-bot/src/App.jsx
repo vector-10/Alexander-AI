@@ -1,12 +1,13 @@
-import React, {useState} from "react";
+import { useState } from 'react'
+
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [count, setCount] = useState("")
 
   return (
-    <>
-     AI-Bot
-    </>
+    <div className='text-red-600'>
+      Ai Chatbot
+    </div>
   )
 }
 

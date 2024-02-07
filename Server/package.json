@@ -18,6 +18,7 @@
     "openai": "^4.26.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "tailwindcss": "^3.4.1"
   }
 }

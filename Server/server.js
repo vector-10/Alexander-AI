@@ -12,7 +12,7 @@ app.use(cors());
 
   const main = async () => {
     const completion = await openai.chat.completions.create({
-    messages: [{ role: "system", content: "I want to make you a god" }],
+    messages: [{ role: "system", content: "how can you advice someone to trade with forex" }],
     model: "gpt-3.5-turbo",
     })
     console.log(completion.choices[0]);

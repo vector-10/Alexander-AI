@@ -1,12 +1,14 @@
 import { useState } from 'react'
+import ChatContainer from './components/ChatContainer';
+
 
 
 function App() {
   const [count, setCount] = useState("")
 
   return (
-    <div className='text-red-600'>
-      Ai Chatbot
+    <div className='app content-center'>
+      <ChatContainer />
     </div>
   )
 }

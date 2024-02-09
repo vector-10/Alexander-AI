@@ -12,8 +12,8 @@ const UserInput = ( { onSendMessage }) => {
     }
 
   return (
-    <div className='user input flex justify-center items-center' onSubmit={handleSubmit}>
-        <form className='bg-white rounded px-8 pt-6 pb-8 mb-2 flex '>
+    <div className='user-input' onSubmit={handleSubmit}>
+        <form className='bg-white rounded flex '>
             <input 
             type='text' 
             placeholder='write a prompt...' 

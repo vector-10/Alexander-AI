@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Message from './Message'
 import UserInput from './UserInput'
+import Sidebar from './SideBar';
 import axios from 'axios';
 
 const ChatContainer = () => {
@@ -17,21 +18,32 @@ const ChatContainer = () => {
             setChatHistory([...chatHistory, 
             { text: message, sender: 'You', timestamp: new Date() },
             { text: botResponse, sender: 'Alexander', timestamp: new Date() },])
-        } catch (error) {
+        } catch (error) { 
          console.error("Error retreiving message", error)   
         }
     }
     // jsx section
-  return (
-    <div className='chat-container'>
-        {/* chat history */}
-        {chatHistory.map((message, index) => (
-        <Message key={index} message={message} />
-      ))}
-         {/* user input */}
-        <UserInput onSendMessage={sendToChatbot} />
-    </div>
-  )
+    return (
+      <div className="flex h-screen">
+        {/* Sidebar */}
+        <Sidebar />
+        
+        {/* Main chat content */}
+        <div className="flex-1 flex flex-col">
+          {/* Chat history */}
+          <div className="flex-1 overflow-y-auto p-4">
+            {chatHistory.map((message, index) => (
+              <Message key={index} message={message} />
+            ))}
+          </div>
+          
+          {/* User input */}
+          <div>
+            <UserInput onSendMessage={sendToChatbot} />
+          </div>
+        </div>
+      </div>
+    );
 }
 
 export default ChatContainer

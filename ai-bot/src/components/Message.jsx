@@ -4,10 +4,12 @@ const Message = ({ message }) => {
   const { text, sender, timestamp } = message;
 
   return (
-    <div className={`message ${sender === 'you' ? 'user-message bg-blue-200' : 'alexander bg-green-200'} m-2 rounded`}>
-      <p className='font-bold'>{sender}</p>
-      <p>{text}</p>
-      <span className="message-timestamp">{formatTimestamp(timestamp)}</span>
+    <div>      
+      <p className='font-bold text-sm'>{sender}</p>
+    <div className={`message p-2 m-2 rounded max-w-96 ${sender === 'You' ? 'user-message bg-blue-200 mr-auto' : 'alexander bg-green-200 ml-auto '}`}>      
+      <p className='text-lg'>{text}</p>
+      <span className="message-timestamp text-xs">{formatTimestamp(timestamp)}</span>
+    </div>
     </div>
   );
 };

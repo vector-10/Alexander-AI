@@ -2,20 +2,21 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
-    <div className="flex h-screen bg-gray-200">
-      {/* Sidebar */}
-      <div className=" bg-gray-800 text-white">
+    <div className="flex flex-row h-screen bg-gray-800 text-white ">     
         {/* Sidebar content */}
         <div className="p-4">
-          <h1 className="text-lg font-semibold mb-4">Sidebar</h1>
+          <h1 className="text-lg font-bold mb-4">Alexander-AI</h1>
           {/* Sidebar links */}
           <ul>
-            <li className="mb-2"><a href="#" className="block px-4 py-2 hover:bg-gray-700">Link 1</a></li>
-            <li className="mb-2"><a href="#" className="block px-4 py-2 hover:bg-gray-700">Link 2</a></li>
-            {/* Add more sidebar links as needed */}
+           <li>Chat Members</li>
+           <br/>
+           <li>Alexander</li>
+           <li>You</li>
           </ul>
         </div>
-      </div>  
+      <div className='flex justify-center items-end p-5'>
+        <p>VectorWare Technologies</p>
+      </div>
     </div>
   );
 };

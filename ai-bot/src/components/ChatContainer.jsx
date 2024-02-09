@@ -24,10 +24,11 @@ const ChatContainer = () => {
     }
     // jsx section
     return (
-      <div className="flex h-screen">
-        {/* Sidebar */}
-        <Sidebar />
-        
+      <div className="flex h-screen w-full">
+        <div className='w-1/4 bg-gray-700'>
+          {/* Sidebar */}
+        <Sidebar />    
+        </div>    
         {/* Main chat content */}
         <div className="flex-1 flex flex-col">
           {/* Chat history */}

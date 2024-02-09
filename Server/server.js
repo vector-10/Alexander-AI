@@ -20,7 +20,7 @@ app.post('/api/sendmessage', async(req, res) => {
     })
     const botResponse = completion.choices[0].message.content
     res.status(200).json({ botResponse })
-    console.log(completion.choices[0])
+    //console.log(completion.choices[0])
   } catch (error) {
     console.log(error)
     res.status(500).json({ error: 'Internal server error'})    

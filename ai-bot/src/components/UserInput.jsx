@@ -7,7 +7,7 @@ const UserInput = ( { onSendMessage }) => {
         e.preventDefault();
         if(inputMessage.trim() !== '') {
             onSendMessage(inputMessage);  // to call the onsend message prop with input value
-            setInputMessage('');  // clear the input field
+            // setInputMessage('');  // clear the input field
         }
     }
 

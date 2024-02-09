@@ -13,15 +13,15 @@ const ChatContainer = () => {
             const response = await axios.post(aiEndpoint, { message });
             // extract the user message and bot response from the API call
             const { botResponse } = response.data;
-            //now to update chat history with bot message
+            // now to update chat history with bot message
             setChatHistory([...chatHistory, 
-            { text: message, sender: 'user', timestamp: new Date() },
-            { text: botResponse, sender: 'system', timestamp: new Date() },])
+            { text: message, sender: 'You', timestamp: new Date() },
+            { text: botResponse, sender: 'Alexander', timestamp: new Date() },])
         } catch (error) {
          console.error("Error retreiving message", error)   
         }
-        sendToChatbot();
     }
+    // jsx section
   return (
     <div className='chat-container'>
         {/* chat history */}

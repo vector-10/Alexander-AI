@@ -2,13 +2,12 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-row h-screen bg-gray-800 text-white ">     
+    <div className="hidden md:flex flex-row h-screen bg-gray-800 text-white ">     
         {/* Sidebar content */}
-        <div className="p-4">
-          <h1 className="text-lg font-bold mb-4">Alexander-AI</h1>
+        <div className="p-4"> 
           {/* Sidebar links */}
           <ul>
-           <li>Chat Members</li>
+           <li>Online Members</li>
            <br/>
            <li>Alexander</li>
            <li>You</li>

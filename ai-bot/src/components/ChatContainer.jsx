@@ -3,6 +3,7 @@ import Message from './Message'
 import UserInput from './UserInput'
 import Sidebar from './SideBar';
 import axios from 'axios';
+import Header from './Header';
 
 const ChatContainer = () => {
     const [ chatHistory, setChatHistory ] = useState([]);
@@ -24,8 +25,10 @@ const ChatContainer = () => {
     }
     // jsx section
     return (
-      <div className="flex h-screen w-full">
-        <div className='w-1/4 bg-gray-700'>
+      <div className=" w-full">  
+      <Header />      
+       <div className='flex'>
+       <div className='w-1/4 '>
           {/* Sidebar */}
         <Sidebar />    
         </div>    
@@ -43,6 +46,7 @@ const ChatContainer = () => {
             <UserInput onSendMessage={sendToChatbot} />
           </div>
         </div>
+       </div>
       </div>
     );
 }

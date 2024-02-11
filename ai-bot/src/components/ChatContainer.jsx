@@ -24,16 +24,15 @@ const ChatContainer = () => {
         }
     }
     // jsx section
-    return (
-      <div className=" w-full">  
-      <Header />      
-       <div className='flex'>
+    return (          
+       <div className='flex w-full h-screen'>
        <div className='w-1/4 '>
           {/* Sidebar */}
         <Sidebar />    
         </div>    
         {/* Main chat content */}
         <div className="flex-1 flex flex-col">
+        <Header />  
           {/* Chat history */}
           <div className="flex-1 overflow-y-auto p-4">
             {chatHistory.map((message, index) => (
@@ -47,7 +46,7 @@ const ChatContainer = () => {
           </div>
         </div>
        </div>
-      </div>
+      
     );
 }
 

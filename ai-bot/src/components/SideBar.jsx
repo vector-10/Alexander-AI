@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
-    <div className="hidden md:flex flex-row h-screen bg-gray-800 text-white ">     
+    <div className="hidden md:flex flex-col justify-between h-screen bg-gray-800 text-white ">     
         {/* Sidebar content */}
         <div className="p-4"> 
           {/* Sidebar links */}
@@ -13,7 +13,7 @@ const Sidebar = () => {
            <li>You</li>
           </ul>
         </div>
-      <div className='flex justify-center items-end p-5'>
+      <div className='p-5 '>
         <p>VectorWare Technologies</p>
       </div>
     </div>
